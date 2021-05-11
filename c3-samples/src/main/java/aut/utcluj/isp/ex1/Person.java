@@ -1,19 +1,17 @@
 package aut.utcluj.isp.ex1;
 
-/**
- * @author stefan
- */
 public class Person {
-    private String firstName;
-    private String lastName;
+    private final String firstName;
+    private final String lastName;
 
     public Person(String firstName) {
+        this.firstName = firstName;
         this.lastName = "";
-        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     public Person(String firstName, String lastName) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public String getFirstName() {
