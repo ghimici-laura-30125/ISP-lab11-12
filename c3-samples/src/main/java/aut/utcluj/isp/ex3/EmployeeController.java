@@ -52,7 +52,7 @@ public class EmployeeController {
      * @return current list of employees
      */
     public List<Employee> getEmployees() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new UnsupportedOperationException("Lista gresita ssbsbsbs");
     }
 
     /**
