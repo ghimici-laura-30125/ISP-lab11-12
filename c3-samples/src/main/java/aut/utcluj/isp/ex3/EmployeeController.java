@@ -1,5 +1,6 @@
 package aut.utcluj.isp.ex3;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,8 +12,10 @@ public class EmployeeController {
      *
      * @param employee - employee information
      */
+    List <Employee> employees = new ArrayList<>();
+    
     public void addEmployee(final Employee employee) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        employees.add(new Employee());
     }
 
     /**
@@ -22,7 +25,10 @@ public class EmployeeController {
      * @return found employee or null if not found
      */
     public Employee getEmployeeByCnp(final String cnp) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        for(Employee empl:employees)
+            if(empl.getCnp().equals(cnp))
+                return empl;
+        return null;
     }
 
     /**
@@ -33,7 +39,12 @@ public class EmployeeController {
      * @return updated employee
      */
     public Employee updateEmployeeSalaryByCnp(final String cnp, final Double salary) {
-        throw new UnsupportedOperationException("Not supported yet.");
+       for(Employee empl:employees)
+         if(empl.getCnp().equals(cnp))
+         { empl.setSalary(salary);
+             return empl;}
+       return null;
+              
     }
 
     /**
@@ -43,7 +54,12 @@ public class EmployeeController {
      * @return deleted employee or null if not found
      */
     public Employee deleteEmployeeByCnp(final String cnp) {
-        throw new UnsupportedOperationException("Not supported yet.");
+         for(Employee empl:employees)
+            if(empl.getCnp().equals(cnp))
+            {employees.remove(empl);
+            return empl;
+            }
+         return null;
     }
 
     /**
@@ -52,7 +68,7 @@ public class EmployeeController {
      * @return current list of employees
      */
     public List<Employee> getEmployees() {
-        throw new UnsupportedOperationException("Lista gresita ssbsbsbs");
+       return employees;
     }
 
     /**
@@ -61,6 +77,6 @@ public class EmployeeController {
      * @return - number of registered employees
      */
     public int getNumberOfEmployees() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return employees.size();
     }
 }

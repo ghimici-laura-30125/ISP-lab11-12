@@ -28,7 +28,7 @@ public class Employee {
     /**
      * Add salary to the employee
      */
-    public void addSalary() {
+    public void addSalary(double newSalary) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 

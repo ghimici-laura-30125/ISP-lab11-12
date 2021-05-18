@@ -10,7 +10,11 @@ public class Employee {
     private String cnp;
 
     public Employee(String firstName, String lastName, Double salary, String cnp) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        
+    }
+
+    Employee() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getFirstName() {
@@ -28,4 +32,9 @@ public class Employee {
     public String getCnp() {
         return cnp;
     }
+
+   public void setSalary(double salary){
+   this.salary=salary;
+   
+   }
 }
