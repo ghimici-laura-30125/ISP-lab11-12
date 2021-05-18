@@ -1,5 +1,5 @@
 package aut.utcluj.isp.ex1;
-//111111
+
 public class Person {
     private final String firstName;
     private final String lastName;
@@ -7,14 +7,12 @@ public class Person {
     public Person(String firstName) {
         this.firstName = firstName;
         this.lastName = "";
-
     }
 
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-
-       
+   
     }
 
     public String getFirstName() {
